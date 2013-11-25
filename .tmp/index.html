@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lange="en">
+  <head>
+    <!--Tech Meta-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Basic Meta-->
+    <title>Inspire Me</title>
+    <meta name="description" content="Inspire Me Description here">
+    <meta name="keywords" content="Keyword1, keyword 2">
+    <!--Facebook Meta-->
+    <meta property="og:title" content="Inspire Me">
+    <meta property="og:site_name" content="Inspire Me">
+    <meta property="og:description" content="Inspire Me Description here">
+    <meta property="og:image" content="http://websiteAppURL.com/fb-img.jpg">
+    <meta property="og:url" content="http://websiteAppURL.com">
+    <meta property="og:type" content="website">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!--Css-->
+    <link rel="stylesheet" media="screen" href="styles/main.css">
+    <!--RSS TODO-->
+  </head>
+  <body class="home">
+    <div id="Wall" class="wall"></div>
+    <div id="Templates">
+      <template id="Post"><a href="{{post_url}}" title="{{title}}" target="_blank" class="post Post">
+          <div style="background-image:url({{low_res_image_url}})" class="img"></div>
+          <div style="background-image:url({{image_url}})" class="img"></div>
+          <div class="overlay"></div>
+          <div class="title">{{title}}</div></a></template>
+    </div>
+    <div id="Scripts">
+      <!--Libs-->
+      <script src="scripts/lib/jquery.min.js"></script>
+      <script src="scripts/lib/jquery-ui.min.js"></script>
+      <script src="scripts/lib/masonry.pkgd.min.js"></script>
+      <script src="scripts/lib/handlebars.js"></script>
+      <script src="scripts/service.js" typetext/javascript></script>
+      <script src="scripts/behance.js" typetext/javascript></script>
+      <script src="scripts/tumblr.js" typetext/javascript></script>
+      <script src="scripts/dribbble.js" typetext/javascript></script>
+      <script src="scripts/app.js" typetext/javascript></script>
+      <!--App Scripts-->
+      <script typetext/javascript>
+        var inspire = {};
+        var api = {};
+        $(document).ready(function(){
+         inspire = new Inspire()
+         inspire.init()
+        })
+      </script>
+    </div>
+  </body>
+</html>

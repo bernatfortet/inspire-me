@@ -1,4 +1,46 @@
 @import "style-global.less";
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800');
 
-body{ }
+.open{ font-family: 'Open Sans', sans-serif; }
 
+html,body{ width:100%; height:100%;}
+
+body{ overflow-y:scroll; background:lighten(black, 5%); }
+
+.wall{ width:100%; height:100%; .overflow; }
+	.post{ height:200px; .rel; .fl; background:url("../images/ajax-loader.gif") no-repeat center center; .overflow; .anchor;  text-decoration:none; display:block;
+		.img{ .cover-all; .bg-size(cover); background-position:center center; .anim; }
+		.overlay{ .cover-all; background:black; .op(0); .anim; }
+		&:hover{ 
+			.img{ .trans(scale(1.1)); .anim( 650ms, 650ms, cubic-bezier(0.19, 1, 0.22, 1)); }
+			.overlay{ .op(0.8); .anim; }
+			.title{ .op(1); .anim(300ms); }
+		}
+		.title{ width:80%; height:80%; .abs; left:10%; top:10%; color:white; .open; text-decoration:none; z-index:2; .op(0); .anim(300ms); }
+	}
+
+
+
+
+
+/*
+@1: ~"only screen and (min-width: 000px)";
+@2: ~"only screen and (min-width: 200px)";
+@3: ~"only screen and (min-width: 600px)";
+@4: ~"only screen and (min-width: 1000px)";
+@5: ~"only screen and (min-width: 1200px)";
+@6: ~"only screen and (min-width: 1400px)";
+@7: ~"only screen and (min-width: 1600px)";
+@8: ~"only screen and (min-width: 1800px)";
+
+
+@media @1 { .wall{ .column-count(1); } .post{ width:100%; } }
+@media @2 { .wall{ .column-count(2); } .post{ width:100%; } }
+@media @3 { .wall{ .column-count(3); } .post{ width:100%; } }
+@media @4 { .wall{ .column-count(4); } .post{ width:100%; } }
+@media @5 { .wall{ .column-count(5); } .post{ width:100%; } }
+@media @6 { .wall{ .column-count(6); } .post{ width:100%; } }
+@media @7 { .wall{ .column-count(7); } .post{ width:100%; } }
+@media @8 { .wall{ .column-count(8); } .post{ width:100%; } }
+
+*/

@@ -1,0 +1,125 @@
+
+.column-count(...) {
+
+  @webkit_local: true;
+  @moz_local: true;
+  @w3c_local: true;
+
+  @process: ~`(function(value){return value=value||"auto"})((function(){var args="@{arguments}";return args=args.replace(/^\[|\]$/g,"")})())`;
+
+  .result (@arguments, @signal, @boolean, @local_boolean) when (@boolean = true) and (@local_boolean = true) {
+    .inception (@signal, @arguments) when (@signal = 1) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { -webkit-column-count: @process; }
+		.inception (@signal, @arguments) when (@signal = 1) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception (@signal, @arguments) when (@signal = 2) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { -moz-column-count: @process; }
+		.inception (@signal, @arguments) when (@signal = 2) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception (@signal, @arguments) when (@signal = 3) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { column-count: @process; }
+		.inception (@signal, @arguments) when (@signal = 3) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception(@signal, @arguments);
+  }
+  .result (@arguments, @signal, @boolean, @local_boolean) when not (@boolean = true), not (@local_boolean = true) {}
+
+  .result(@arguments, 1, @webkit, @webkit_local);
+  .result(@arguments, 2, @moz, @moz_local);
+  .result(@arguments, 3, @w3c, @w3c_local);
+
+}
+
+.column-gap(...) {
+
+  @webkit_local: true;
+  @moz_local: true;
+  @w3c_local: true;
+
+  @process: ~`(function(value){value=value||"normal";var numRegex=/\d/gi,numWithoutValue=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return numRegex.test(value)&&(value=value.replace(numWithoutValue,function(match){return match+"px"})),value})((function(){var args="@{arguments}";return args=args.replace(/^\[|\]$/g,"")})())`;
+
+  .result (@arguments, @signal, @boolean, @local_boolean) when (@boolean = true) and (@local_boolean = true) {
+    .inception (@signal, @arguments) when (@signal = 1) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { -webkit-column-gap: @process; }
+		.inception (@signal, @arguments) when (@signal = 1) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception (@signal, @arguments) when (@signal = 2) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { -moz-column-gap: @process; }
+		.inception (@signal, @arguments) when (@signal = 2) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception (@signal, @arguments) when (@signal = 3) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { column-gap: @process; }
+		.inception (@signal, @arguments) when (@signal = 3) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception(@signal, @arguments);
+  }
+  .result (@arguments, @signal, @boolean, @local_boolean) when not (@boolean = true), not (@local_boolean = true) {}
+
+  .result(@arguments, 1, @webkit, @webkit_local);
+  .result(@arguments, 2, @moz, @moz_local);
+  .result(@arguments, 3, @w3c, @w3c_local);
+
+}
+
+.column-rule(...) {
+
+  @webkit_local: true;
+  @moz_local: true;
+  @w3c_local: true;
+
+  @process: ~`(function(value){value=value||"medium none black";var numRegex=/\d/gi,numWithoutValue=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return/^[-a-zA-Z0-9().\/]*,/.test(value)&&(value=value.replace(/(?:,)(?![^(]*\))/g,"")),numRegex.test(value)&&(value=value.replace(numWithoutValue,function(match){return match+"px"})),value})((function(){var args="@{arguments}";return args=args.replace(/^\[|\]$/g,"")})())`;
+
+  .result (@arguments, @signal, @boolean, @local_boolean) when (@boolean = true) and (@local_boolean = true) {
+    .inception (@signal, @arguments) when (@signal = 1) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { -webkit-column-rule: @process; }
+		.inception (@signal, @arguments) when (@signal = 1) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception (@signal, @arguments) when (@signal = 2) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { -moz-column-rule: @process; }
+		.inception (@signal, @arguments) when (@signal = 2) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception (@signal, @arguments) when (@signal = 3) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { column-rule: @process; }
+		.inception (@signal, @arguments) when (@signal = 3) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception(@signal, @arguments);
+  }
+  .result (@arguments, @signal, @boolean, @local_boolean) when not (@boolean = true), not (@local_boolean = true) {}
+
+  .result(@arguments, 1, @webkit, @webkit_local);
+  .result(@arguments, 2, @moz, @moz_local);
+  .result(@arguments, 3, @w3c, @w3c_local);
+
+}
+
+.column-width(...) {
+
+  @webkit_local: true;
+  @moz_local: true;
+  @w3c_local: true;
+
+  @process: ~`(function(value){value=value||"auto";var numRegex=/\d/gi,numWithoutValue=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return numRegex.test(value)&&(value=value.replace(numWithoutValue,function(match){return match+"px"})),value})((function(){var args="@{arguments}";return args=args.replace(/^\[|\]$/g,"")})())`;
+
+  .result (@arguments, @signal, @boolean, @local_boolean) when (@boolean = true) and (@local_boolean = true) {
+    .inception (@signal, @arguments) when (@signal = 1) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { -webkit-column-width: @process; }
+		.inception (@signal, @arguments) when (@signal = 1) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception (@signal, @arguments) when (@signal = 2) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { -moz-column-width: @process; }
+		.inception (@signal, @arguments) when (@signal = 2) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception (@signal, @arguments) when (@signal = 3) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { column-width: @process; }
+		.inception (@signal, @arguments) when (@signal = 3) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception(@signal, @arguments);
+  }
+  .result (@arguments, @signal, @boolean, @local_boolean) when not (@boolean = true), not (@local_boolean = true) {}
+
+  .result(@arguments, 1, @webkit, @webkit_local);
+  .result(@arguments, 2, @moz, @moz_local);
+  .result(@arguments, 3, @w3c, @w3c_local);
+
+}
+
+.columns(...) {
+
+  @webkit_local: true;
+  @moz_local: true;
+  @w3c_local: true;
+
+  @process: ~`(function(value){value=value||"auto auto";var numRegex=/^\d+$/;return/^[-a-zA-Z0-9().\/]*,/.test(value)&&(value=value.replace(/(?:,)(?![^(]*\))/g,""),value=value.split(" ")),numRegex.test(value[0])&&(value[0]=value[0]+"px"),value.join(" ")})((function(){var args="@{arguments}";return args=args.replace(/^\[|\]$/g,"")})())`;
+
+  .result (@arguments, @signal, @boolean, @local_boolean) when (@boolean = true) and (@local_boolean = true) {
+    .inception (@signal, @arguments) when (@signal = 1) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { -webkit-columns: @process; }
+		.inception (@signal, @arguments) when (@signal = 1) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception (@signal, @arguments) when (@signal = 2) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { -moz-columns: @process; }
+		.inception (@signal, @arguments) when (@signal = 2) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception (@signal, @arguments) when (@signal = 3) and (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) { columns: @process; }
+		.inception (@signal, @arguments) when (@signal = 3) and not (isstring(@process)) and not (iscolor(@process)) and not (isnumber(@process)) and not (iskeyword(@process)) and not (isurl(@process)) and not (ispixel(@process)) and not (ispercentage(@process)) and not (isem(@process)) {} 
+    .inception(@signal, @arguments);
+  }
+  .result (@arguments, @signal, @boolean, @local_boolean) when not (@boolean = true), not (@local_boolean = true) {}
+
+  .result(@arguments, 1, @webkit, @webkit_local);
+  .result(@arguments, 2, @moz, @moz_local);
+  .result(@arguments, 3, @w3c, @w3c_local);
+
+}
