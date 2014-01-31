@@ -9,6 +9,9 @@ class @Inspire
 			apiKey: 'hrRjg1hdm9LxrGOnNKz5wznOlJ1eVLdi'
 		dribbble:
 			username: ''
+		instagram:
+			username: ''
+			apiKey: 'af1520013858492db7e4efe67593d231'
 
 	posts: null
 
@@ -22,10 +25,12 @@ class @Inspire
 		this.servicesMeta.tumblr.username = 'bernatfortet.tumblr.com'
 		this.servicesMeta.behance.username = 'bernatfortet'
 		this.servicesMeta.dribbble.username = 'bernatfortet'
+		this.servicesMeta.instagram.username = 'bernatfortet'
 
-		this.behance 	= new Behance( this.servicesMeta.behance )	
-		this.tumblr 	= new Tumblr( this.servicesMeta.tumblr )
-		this.dribbble 	= new Dribbble( this.servicesMeta.dribbble )	
+		this.behance 		= new Behance( this.servicesMeta.behance )	
+		this.tumblr 		= new Tumblr( this.servicesMeta.tumblr )
+		this.tumblrFeed 	= new TumblrFeed( this.servicesMeta.tumblr )
+		this.dribbble 		= new Dribbble( this.servicesMeta.dribbble )	
 
 		this.wall = $('#Wall')
 
